@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>매일의 커피</title>
+<style>
+  @font-face {
+    font-family: 'SchoolSafetyHalfMoon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2508-2@1.0/HakgyoansimBandalL.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  :root {
+    --bg: #f5efe6;
+    --dark: #2b1d14;
+    --brown: #6f4e37;
+    --brown-light: #a9784f;
+    --cream: #fffaf3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "SchoolSafetyHalfMoon", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: radial-gradient(circle at 50% 20%, #4a3222, #201309 80%);
+    color: var(--cream);
+  }
+  .hero .eyebrow {
+    letter-spacing: 0.3em;
+    font-size: 0.85rem;
+    color: var(--brown-light);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+  }
+  .hero p {
+    max-width: 34rem;
+    color: #e9ddcf;
+    font-size: 1.05rem;
+  }
+  .hero .cup {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .points {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+  .point {
+    position: relative;
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 2.2rem 1.8rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(43, 29, 20, 0.08);
+    transition: transform 0.2s ease;
+  }
+  .point:hover { transform: translateY(-6px); }
+  .point .icon {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  .point h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: var(--brown);
+  }
+  .point p {
+    font-size: 0.95rem;
+    color: #574435;
+  }
+
+  .beans {
+    position: absolute;
+    inset: 0;
+    overflow: visible;
+    pointer-events: none;
+  }
+  .bean {
+    position: absolute;
+    bottom: 6px;
+    font-size: 1.3rem;
+    opacity: 0;
+  }
+  .point:hover .bean {
+    animation: bean-rise 2.2s ease-in infinite;
+  }
+  .bean:nth-child(1) { left: 8%;  animation-delay: 0s; }
+  .bean:nth-child(2) { left: 26%; animation-delay: 0.4s; font-size: 1rem; }
+  .bean:nth-child(3) { left: 48%; animation-delay: 0.8s; font-size: 1.5rem; }
+  .bean:nth-child(4) { left: 68%; animation-delay: 1.2s; font-size: 1.1rem; }
+  .bean:nth-child(5) { left: 86%; animation-delay: 1.6s; font-size: 1.2rem; }
+
+  @keyframes bean-rise {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0) scale(0.5);
+    }
+    12% {
+      opacity: 0.9;
+    }
+    50% {
+      transform: translate(6px, -70px) scale(0.9);
+    }
+    85% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-6px, -140px) scale(1.1);
+    }
+  }
+
+  .tagline {
+    background: var(--brown);
+    color: var(--cream);
+    text-align: center;
+    padding: 4rem 1.5rem;
+  }
+  .tagline p {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #8a7660;
+    padding: 1.5rem;
+    background: var(--bg);
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="cup">☕</div>
+    <div class="eyebrow">Everyday Coffee</div>
+    <h1>매일의 커피, 매일의 순간</h1>
+    <p>정성껏 로스팅한 원두로 내린 한 잔이 하루의 시작을 바꿉니다. 지금, 커피가 주는 작은 여유를 만나보세요.</p>
+  </section>
+
+  <section class="points">
+    <div class="point">
+      <div class="beans">
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+      </div>
+      <div class="icon">🌱</div>
+      <h3>엄선된 원두</h3>
+      <p>전 세계 산지에서 직접 선별한 스페셜티 원두만을 사용합니다.</p>
+    </div>
+    <div class="point">
+      <div class="beans">
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+      </div>
+      <div class="icon">🔥</div>
+      <h3>정성스러운 로스팅</h3>
+      <p>매일 소량으로 로스팅해 가장 신선한 향과 맛을 담아냅니다.</p>
+    </div>
+    <div class="point">
+      <div class="beans">
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+        <span class="bean">🫘</span>
+      </div>
+      <div class="icon">🤝</div>
+      <h3>당신을 위한 한 잔</h3>
+      <p>바리스타의 손끝에서 완성되는, 당신만을 위한 커피 한 잔.</p>
+    </div>
+  </section>
+
+  <section class="tagline">
+    <p>"인생은 짧고, 커피는 따뜻할 때 마셔야 한다."</p>
+  </section>
+
+  <footer>&copy; 2026 Everyday Coffee. All rights reserved.</footer>
+
+</body>
+</html>

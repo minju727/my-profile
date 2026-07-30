@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김민주 프로필</title>
+<style>
+  @font-face {
+    font-family: 'SchoolSafetyHalfMoon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2508-2@1.0/HakgyoansimBandalL.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  :root {
+    --bg: #f5efe6;
+    --dark: #2b1d14;
+    --brown: #6f4e37;
+    --brown-light: #a9784f;
+    --cream: #fffaf3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "SchoolSafetyHalfMoon", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 3rem 2.2rem;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(43, 29, 20, 0.12);
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--brown-light), var(--brown));
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+
+  .name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.3rem;
+  }
+
+  .role {
+    color: var(--brown);
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .section {
+    text-align: left;
+    border-top: 1px solid #e9dfd0;
+    padding: 1.1rem 0;
+  }
+  .section:last-of-type {
+    border-bottom: 1px solid #e9dfd0;
+  }
+  .section .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brown-light);
+    margin-bottom: 0.3rem;
+  }
+  .section .value {
+    font-size: 0.98rem;
+    color: #4a3626;
+  }
+
+  .contact {
+    margin-top: 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--brown);
+    color: var(--cream);
+    padding: 0.55rem 1.3rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="avatar">민</div>
+    <div class="name">김민주</div>
+    <div class="role">보험업무 개발</div>
+
+    <div class="section">
+      <div class="label">관심사</div>
+      <div class="value">AI, 바이브코딩</div>
+    </div>
+    <div class="section">
+      <div class="label">취미</div>
+      <div class="value">여행</div>
+    </div>
+
+    <div class="contact">📍 서울</div>
+  </div>
+
+</body>
+</html>
